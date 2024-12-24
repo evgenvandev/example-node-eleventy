@@ -86,6 +86,9 @@ module.exports = function (eleventyConfig) {
     "./src/static/js/footer.js": "./static/js/footer.js",
     "./src/static/js/search.js": "./static/js/search.js",
     "./src/static/js/elasticlunr.min.js": "./static/js/elasticlunr.min.js",
+    "./src/static/js/lunr.stemmer.support.js": "./static/js/lunr.stemmer.support.js",
+    "./src/static/js/lunr.multi.js": "./static/js/lunr.multi.js",
+    "./src/static/js/lunr.ru.js": "./static/js/lunr.ru.js",
   });
 
   // Katex Files (CSS use CDN)
