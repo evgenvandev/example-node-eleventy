@@ -1,0 +1,37 @@
+---
+layout: default
+toc: false
+comments: false
+---
+{# insert toc #}
+<section class="section is-mobile-paddingless">
+    <div class="columns">
+      <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
+      <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd">
+          {{ content | safe }}
+      </div>
+      <div class="column is-hidden-touch">
+        {% if toc %}
+          <div id="toc"></div>
+        {% endif %}
+      </div>
+    </div>
+</section>
+
+{# comments #}
+{% if comments %}
+<section class="section is-mobile-paddingless">
+    <div class="columns is-mobile" id="comments">
+        <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
+        <div class="column is-12-tablet is-10-desktop is-10-widescreen is-8-fullhd">
+            <script src="https://giscus.app/client.js"
+                    data-theme="light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+        <div class="column is-hidden-touch"></div>
+        </div>
+    </div>
+</section>
+{% endif %}

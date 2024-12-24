@@ -1,0 +1,19 @@
+meta:
+  name: Fizzy
+  url: ""
+  description: Exploring exciting things.
+  icon: /favicon.ico
+  footerInfo: The voyage begins in London.
+post:
+  showFeatureImage: true
+  featureText: featured
+seo:
+  title: Fizzy Blog
+  keywords: JAMStack, Hobby, Life
+# appearance:
+#   mainColor: "#C668B9"
+#   linkHoverColor: "#C668B9"
+component:
+  navSearch: true
+  authorBox: true
+  codeLineNumbers: true

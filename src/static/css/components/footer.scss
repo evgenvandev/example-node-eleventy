@@ -1,0 +1,15 @@
+// import _variables
+@use 'variables' as var;
+
+.footer{
+	box-shadow: 0 0px 1px 0 #bbb;
+}
+.declare a {
+	color:#666;
+	word-break: break-word;
+	transition: all .25s;
+
+}
+.declare a:hover {
+	color: var.$link-color-hover;
+}

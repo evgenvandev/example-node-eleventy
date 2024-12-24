@@ -1,0 +1,33 @@
+{# navigation #}
+{% if navigation.navItems %}
+  {% for items in navigation.navItems %}
+    <a class="navbar-item {{ 'nav-current' if (path | replace("/", "")) == (items.url | replace("/", "")) }}" href="{{ items.url }}">
+      {{ items.text }}
+    </a>
+  {% endfor %}
+{% endif %}
+
+{# navbar search #}
+{% if settings.component.navSearch %}
+<div class="fizzy-search">
+    <div class="navbar-item" id="search-btn">
+      <i class="iconfont icon-search"></i>
+    </div>
+
+    {# id: search container #}
+    <div class="field has-addons" style="display:none" id="search-container">
+        {# id: search-form #}
+        <form id="search-form" class="control has-icons-left" action="/search/" method="get">
+            <input id="search-input" type="text" class="input" placeholder="Search" name="q">
+            <span class="icon is-left">
+                <i class="iconfont icon-search"></i>
+            </span>
+        </form>
+        {# id: close-btn #}
+        <div class="control" id="close-btn">
+            <button type="submit" class="button" style="padding-left:calc(0.75em - 1px);padding-right:calc(0.75em - 1px);"><i class="iconfont icon-cross"></i></button>
+        </div>
+    </div>
+    {# <div id="search-results"></div> #}
+</div>
+{% endif %}
