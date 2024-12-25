@@ -23,10 +23,10 @@
 
         {# featured image #}
         {% if settings.post.showFeatureImage and post.data.image %}
-          <a class="column is-hidden-mobile is-paddingless" href="{{ post.url | htmlBaseUrl }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
+          <a class="column is-hidden-mobile is-paddingless" href="{{ post.url | url }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
             <div class="featured-image" style="background-image: url('{{ post.data.image }}')"></div>
           </a>
-          <a class="column is-hidden-tablet" href="{{ post.url | htmlBaseUrl }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
+          <a class="column is-hidden-tablet" href="{{ post.url | url }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
             <div class="featured-image" style="background-image: url('{{ post.data.image }}')"></div>
           </a>
 
@@ -93,7 +93,7 @@
               </div>
 
               {# heading & summary #}
-              <a href="{{ post.url | htmlBaseUrl }}" class="has-text-black">
+              <a href="{{ post.url | url }}" class="has-text-black">
                 <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">{{ post.data.title }}</h1>
               </a>
               {% if settings.post.showFeatureImage and post.data.image %}
