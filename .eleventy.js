@@ -81,14 +81,14 @@ module.exports = function (eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./src/static/fonts/*": "/example-node-eleventy/static/fonts/",
-    "./src/admin/config.yml": "/example-node-eleventy/admin/config.yml",
-    "./src/static/js/footer.js": "/example-node-eleventy/static/js/footer.js",
-    "./src/static/js/search.js": "/example-node-eleventy/static/js/search.js",
-    "./src/static/js/elasticlunr.min.js": "/example-node-eleventy/static/js/elasticlunr.min.js",
-    "./src/filters/lunr.stemmer.support.js": "/example-node-eleventy/static/js/lunr.stemmer.support.js",
-    "./src/filters/lunr.multi.js": "/example-node-eleventy/static/js/lunr.multi.js",
-    "./src/filters/lunr.ru.js": "/example-node-eleventy/static/js/lunr.ru.js",
+    "./src/static/fonts/*": "./example-node-eleventy/static/fonts/",
+    "./src/admin/config.yml": "./example-node-eleventy/admin/config.yml",
+    "./src/static/js/footer.js": "./example-node-eleventy/static/js/footer.js",
+    "./src/static/js/search.js": "./example-node-eleventy/static/js/search.js",
+    "./src/static/js/elasticlunr.min.js": "./example-node-eleventy/static/js/elasticlunr.min.js",
+    "./src/filters/lunr.stemmer.support.js": "./example-node-eleventy/static/js/lunr.stemmer.support.js",
+    "./src/filters/lunr.multi.js": "./example-node-eleventy/static/js/lunr.multi.js",
+    "./src/filters/lunr.ru.js": "./example-node-eleventy/static/js/lunr.ru.js",
   });
 
   // Katex Files (CSS use CDN)
