@@ -8,11 +8,11 @@ const searchFilter = require("./src/filters/searchFilter");
 const markdownIt = require("markdown-it");
 const markdownItMark = require("markdown-it-mark");
 const markdownItFootnote = require("markdown-it-footnote");
-const eleventyHtmlBasePlugin = require("@11ty/eleventy");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
 
-	eleventyConfig.addPlugin(eleventyHtmlBasePlugin);
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   // overwrite markdown-it options
   let options = {
