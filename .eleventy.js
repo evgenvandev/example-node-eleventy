@@ -8,18 +8,11 @@ const searchFilter = require("./src/filters/searchFilter");
 const markdownIt = require("markdown-it");
 const markdownItMark = require("markdown-it-mark");
 const markdownItFootnote = require("markdown-it-footnote");
-
-module.exports = async function (eleventyConfig) {
-	const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
-
-	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-};
-
-module.exports.config = {
-	pathPrefix: "/example-node-eleventy/",
-};
+const eleventyHtmlBasePlugin = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
+
+	eleventyConfig.addPlugin(eleventyHtmlBasePlugin);
 
   // overwrite markdown-it options
   let options = {
@@ -189,4 +182,8 @@ module.exports = function (eleventyConfig) {
     // use njk as the default template engine for .md files
     markdownTemplateEngine: "njk"
   };
+};
+
+export const config = {
+	pathPrefix: "/example-node-eleventy/",
 };
