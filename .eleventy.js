@@ -184,6 +184,6 @@ module.exports = function (eleventyConfig) {
   };
 };
 
-export const config = {
+module.exports.config = {
 	pathPrefix: "/example-node-eleventy/",
-};
+}
