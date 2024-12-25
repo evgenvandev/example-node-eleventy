@@ -1,11 +1,11 @@
 const elasticlunr = require("elasticlunr");
-require('/workspaces/example-node-eleventy/src/static/js/lunr.stemmer.support.js')(elasticlunr);
-require('/workspaces/example-node-eleventy/src/static/js/lunr.ru.js')(elasticlunr);
-require('/workspaces/example-node-eleventy/src/static/js/lunr.multi.js')(elasticlunr);
+require('./lunr.stemmer.support.js')(elasticlunr);
+require('./lunr.multi.js')(elasticlunr);
+//require('./lunr.ru.js')(elasticlunr);
 
 module.exports = function(collection) {
   var index = elasticlunr(function() {
-    this.use(elasticlunr.ru);
+    //this.use(elasticlunr.ru);
     this.addField("title");
     this.addField("url");
     this.addField("tags");
