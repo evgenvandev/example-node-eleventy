@@ -9,6 +9,16 @@ const markdownIt = require("markdown-it");
 const markdownItMark = require("markdown-it-mark");
 const markdownItFootnote = require("markdown-it-footnote");
 
+module.exports = async function (eleventyConfig) {
+	const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+};
+
+module.exports.config = {
+	pathPrefix: "/example-node-eleventy/",
+};
+
 module.exports = function (eleventyConfig) {
 
   // overwrite markdown-it options
