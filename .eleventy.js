@@ -12,8 +12,6 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
 
-	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
   // overwrite markdown-it options
   let options = {
     html: true,
@@ -162,6 +160,8 @@ module.exports = function (eleventyConfig) {
     }
     return content;
   });
+
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   return {
     dir: {
