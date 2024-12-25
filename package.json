@@ -5,7 +5,7 @@
   "author": "Yuzhang Huang",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production eleventy --pathprefix=/example-node-eleventy/ && cross-env NODE_ENV=production sass  --pathprefix=/example-node-eleventy --style=compressed src/static/css/main.scss _site/static/css/styles.css",
+    "build": "cross-env NODE_ENV=production eleventy --pathprefix=/example-node-eleventy/ && cross-env NODE_ENV=production sass  --pathprefix=/example-node-eleventy/ --style=compressed src/static/css/main.scss _site/static/css/styles.css",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/example-node-eleventy/",
     "start-ghpages": "npx @11ty/eleventy --pathprefix=/example-node-eleventy/ --serve --quiet",
     "start": "npx @11ty/eleventy --serve --quiet",
