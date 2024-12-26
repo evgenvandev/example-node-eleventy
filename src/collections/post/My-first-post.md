@@ -11,6 +11,7 @@ image: /static/img/my-first-post/title-11ty-sample-project.jpg
 isFeatured: false
 description: Описание поста
 comments: false
+color-title: red
 ---
 
 [Оригинал статьи](https://dev.to/loige/getting-started-with-eleventy-in-11-minutes-496j?ysclid=m4cgbwznqv999658354 "Начало работы с Eleventy за 11 минут")   
