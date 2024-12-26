@@ -182,6 +182,6 @@ module.exports = function (eleventyConfig) {
     // use njk as the default template engine for .md files
     markdownTemplateEngine: "njk",
 
-		pathPrefix: "/"
+		pathPrefix: "/example-node-eleventy/"
   };
 };
