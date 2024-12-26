@@ -7,7 +7,7 @@ authors:
 tags:
   - data
   - doc
-image: /example-node-eleventy/static/img/my-first-post/title-11ty-sample-project.jpg
+image: /static/img/my-first-post/title-11ty-sample-project.jpg
 isFeatured: false
 description: Описание поста
 comments: false
