@@ -1,12 +1,12 @@
 {
-  "name": "",
+  "name": "blog-project",
   "version": "0.2.0",
   "description": "Fizzy Jam is an out-of-the-box Jamstack web app practice.",
   "author": "Yuzhang Huang",
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production sass --style=compressed src/static/css/main.scss _site/static/css/styles.css",
-    "build-ghpages": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/example-node-eleventy/",
     "start-ghpages": "npx @11ty/eleventy --serve --quiet",
     "start": "npx @11ty/eleventy --serve --quiet",
     "local": "npm-run-all --parallel sass-watch eleventy cms",
