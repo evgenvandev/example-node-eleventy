@@ -65,8 +65,9 @@
                 {% for pTag in post.data.tags %}
                   {% if slug == pTag %}
                     {# the first(i.e. [0]) tag is "post", set in `src/collections/post/post.json` #}
-                    {% set primary_tag_name = name %}
-                    {% set primary_tag_slug = slug %}
+                    {# {% set primary_tag_name = name %} #}
+                    {# {% set primary_tag_slug = slug %} #}
+                    {% set tagList = (tagList.push([name, slug]), tagList) %}
                   {% endif %}
                 {% endfor %}
               {% endfor %}
@@ -76,9 +77,11 @@
                   {# primary tag #}
                   {% if primary_tag_slug | length > 0 %}
                     <div class="level-item">
-                      <div class="buttons are-small">
-                        <a href="{{ base_url_in_default }}/tag/{{primary_tag_slug}}/" class="button is-light has-text-weight-semibold">{{ primary_tag_name }}</a>
-                      </div>
+                      {% for name, slug in tagList %}
+                        <div class="buttons are-small">
+                          <a href="{{ base_url_in_default }}/tag/{{ slug }}/" class="button is-light has-text-weight-semibold">{{ name }}</a>
+                        </div>
+                      {% endfor %}
                     </div>
                   {% endif %}
 
