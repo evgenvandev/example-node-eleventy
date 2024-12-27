@@ -77,11 +77,9 @@
                   {# primary tag #}
                   {% if primary_tag_slug | length > 0 %}
                     <div class="level-item">
-                      {% for tName, tSlug in tagList %}
-                        <div class="buttons are-small">
-                          <a href="{{ base_url_in_default }}/tag/{{ tSlug }}/" class="button is-light has-text-weight-semibold">{{ tName }}</a>
-                        </div>
-                      {% endfor %}
+                      <div class="buttons are-small">
+                        <a href="{{ base_url_in_default }}/tag/{{primary_tag_slug}}/" class="button is-light has-text-weight-semibold">{{ primary_tag_name }}</a>
+                      </div>
                     </div>
                   {% endif %}
 
