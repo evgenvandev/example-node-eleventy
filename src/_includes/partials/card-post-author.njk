@@ -6,7 +6,7 @@
       <div class="column">
           <div class="card" style="border-radius:6px;overflow:hidden;">
             <div class="card-content about-author has-text-centered">
-              <a href="/author/{{ slug }}/" class="has-text-grey-darker">
+              <a href="{{ base_url_in_default }}/author/{{ slug }}/" class="has-text-grey-darker">
                   <figure class="image is-96x96 is-margin-auto">
                     {% if avatar %}
                       <img class="image-squared box author-avatar" src="{{ base_url_in_default + avatar }}" alt="{{ name }}" title="{{ name }}">
