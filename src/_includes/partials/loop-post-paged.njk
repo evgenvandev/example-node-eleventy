@@ -88,7 +88,7 @@
                     <div class="level-item">
                       {% for name, slug in tagList %}
                         <div class="buttons are-small">
-                          <a href="{{ base_url_in_default }}/tag/{{primary_tag_slug}}/" class="button is-light has-text-weight-semibold">{{ primary_tag_name }}</a>
+                          <a href="{{ base_url_in_default }}/tag/{{ slug }}/" class="button is-light has-text-weight-semibold">{{ name }}</a>
                         </div>
                       {% endfor %}
                     </div>
