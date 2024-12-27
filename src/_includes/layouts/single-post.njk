@@ -81,9 +81,9 @@ comments: true
           <div class="buttons tags has-text-weight-semibold">
             <button class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em" title="View all tags" alt="View all tags">
               {% if tagList | length == 1 %}
-                <a href="{{ base_url_in_default }}/tag/"><i class="iconfont icon-tag"></i></a>
+                <i class="iconfont icon-tag"></i>
               {% else %}
-                <a href="{{ base_url_in_default }}/tag/"><i class="iconfont icon-tags"></i></a>
+                <i class="iconfont icon-tags"></i>
               {% endif %}
             </button>
             {% for name, slug in tagList %}
