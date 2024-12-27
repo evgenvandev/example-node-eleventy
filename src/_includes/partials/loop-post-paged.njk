@@ -65,9 +65,8 @@
                 {% for pTag in post.data.tags %}
                   {% if slug == pTag %}
                     {# the first(i.e. [0]) tag is "post", set in `src/collections/post/post.json` #}
-                    {# {% set primary_tag_name = name %} #}
-                    {# {% set primary_tag_slug = slug %} #}
-                    {% set tagList = (tagList.push([name, slug]), tagList) %}
+                    {% set primary_tag_name = name %}
+                    {% set primary_tag_slug = slug %}
                   {% endif %}
                 {% endfor %}
               {% endfor %}
