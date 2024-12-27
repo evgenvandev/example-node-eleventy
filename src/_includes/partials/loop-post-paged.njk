@@ -132,7 +132,7 @@
                         {% if primary_author_avatar %}
                           <div class="column is-narrow is-rpaddingless">
                             <figure class="image is-32x32">
-                              <a href="/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
+                              <a href="{{ base_url_in_default }}/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
                                 <img class="image-squared round-border-6" src="{{ primary_author_avatar }}" alt="{{ primary_author_name }}" title="{{ primary_author_name }}">
                               </a>
                             </figure>
@@ -141,7 +141,7 @@
 
                         {# author name #}
                         <div class="column is-narrow has-text-weight-bold">
-                          <a href="/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
+                          <a href="{{ base_url_in_default }}/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
                             {{ primary_author_name }}
                           </a>
                         </div>
