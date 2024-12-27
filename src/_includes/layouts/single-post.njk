@@ -7,6 +7,7 @@ comments: true
 ---
 {# pre-work #}
 {# store author[*] into variable site_authors #}
+{% set base_url_in_default = "/" + settings.meta.url %}
 {% set site_authors = [] %}
 {% for author in collections.author %}
   {% set site_authors = (site_authors.push([
