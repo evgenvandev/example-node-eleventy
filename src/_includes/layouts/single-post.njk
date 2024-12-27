@@ -79,13 +79,13 @@ comments: true
 
         {% if tagList | length > 0 %}
           <div class="buttons tags has-text-weight-semibold">
-            <a href="{{ base_url_in_default }}/tag/"><button class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em" title="View all tags" alt="View all tags">
+            <button class="button is-static is-size-7-mobile" style="padding:0 0.5em;min-width:2.5em" title="View all tags" alt="View all tags">
               {% if tagList | length == 1 %}
-                <i class="iconfont icon-tag"></i>
+                <a href="{{ base_url_in_default }}/tag/"><i class="iconfont icon-tag"></i></a>
               {% else %}
-                <i class="iconfont icon-tags"></i>
+                <a href="{{ base_url_in_default }}/tag/"><i class="iconfont icon-tags"></i></a>
               {% endif %}
-            </button></a>
+            </button>
             {% for name, slug in tagList %}
               <a href="{{ base_url_in_default }}/tag/{{slug}}/" class="button is-size-7-mobile has-text-weight-semibold">{{ name }}</a>
             {% endfor %}
