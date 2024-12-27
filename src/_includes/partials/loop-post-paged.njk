@@ -1,5 +1,6 @@
 {# post loop used in post-list, single-author, single-tag #}
 
+{% set base_url_in_default = "/" + settings.meta.url %}
 {# pre-work #}
 {# store author[name,slug,avatar] into variable site_authors #}
 {% set site_authors = [] %}
