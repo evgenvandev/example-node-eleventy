@@ -14,7 +14,7 @@
           <div class="navbar-item text-logo" alt="{{ settings.meta.name }}" title="{{ settings.meta.name }} - {{ settings.meta.description }}">
               <a class="align-vcentered" href="/">
                 {% if settings.meta.icon %}
-                  <img src="{{ settings.meta.icon }}" class="icon">
+                  <img src="{{ base_url + settings.meta.icon }}" class="icon">
                 {% endif %}
                 {{ settings.meta.name }}<span class="main-color">.</span>
               </a>
