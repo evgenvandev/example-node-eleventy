@@ -68,13 +68,13 @@
       {% include "../partials/footer.njk" %}
     {% endif %}
 
-    <script src="/static/js/footer.js"></script>
-    {# <script src="/static/js/alpine.js"></script> #}
+    <script src="{{ base_url_in_default }}/static/js/footer.js"></script>
+    {# <script src="{{ base_url_in_default }}/static/js/alpine.js"></script> #}
 
     {# search #}
 
     {% if toc == true %}
-      <script src="/static/js/toc.js"></script>
+      <script src="{{ base_url_in_default }}/static/js/toc.js"></script>
       <script>
         const toc = new fizzyToc({
           contentEl: 'content',
@@ -92,8 +92,8 @@
     {% endif %}
     
     {% if prism == true %}
-      <script src="/static/js/prism-line-numbers.min.js"></script>
-      <script defer src="/static/js/prism.js"></script>
+      <script src="{{ base_url_in_default }}/static/js/prism-line-numbers.min.js"></script>
+      <script defer src="{{ base_url_in_default }}/static/js/prism.js"></script>
     {% endif %}
 
     {% if katex == true %}
