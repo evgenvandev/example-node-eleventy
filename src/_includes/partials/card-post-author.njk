@@ -10,7 +10,7 @@
                     {% if avatar %}
                       <img class="image-squared box author-avatar" src="{{ avatar }}" alt="{{ name }}" title="{{ name }}">
                     {% else %}
-                      <img class="image-squared box author-avatar" src="/static/img/user.svg" alt="{{ name }}" title="{{ name }}">
+                      <img class="image-squared box author-avatar" src="{{ base_url_in_default }}/static/img/user.svg" alt="{{ name }}" title="{{ name }}">
                     {% endif %}
                   </figure>
                   <div class="name is-main-font">{{ name }}</div>
