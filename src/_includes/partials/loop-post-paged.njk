@@ -61,6 +61,7 @@
               {% set primary_tag_name = "" %}
               {% set primary_tag_slug = "" %}
 
+              {% set tagList = [] %}
               {% for name, slug in site_tags %}
                 {% for pTag in post.data.tags %}
                   {% if slug == pTag %}
