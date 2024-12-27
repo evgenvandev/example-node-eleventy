@@ -116,7 +116,7 @@
       }
     };
   
-    fetch("/search-index.json").then((response) =>
+    fetch("example-node-eleventy/search-index.json").then((response) =>
       response.json().then((rawIndex) => {
         // Если вы сериализуете индекс и загружаете его в другой скрипт, вам придется инициализировать поддержку нескольких языков в этом скрипте, например так:
         elasticlunr.multiLanguage('en', 'ru');
