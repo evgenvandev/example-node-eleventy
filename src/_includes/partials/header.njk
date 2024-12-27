@@ -6,13 +6,13 @@
         {# logo area: LOGO > ICON & SiteName > SiteName #}
         {% if settings.meta.logo %}
           <div class="navbar-item logo">
-              <a href="/">
+              <a href="{{ base_url_in_default }}/">
                   <img src="{{ settings.meta.logo }}" class="logo" alt="{{ settings.meta.name }}" title="{{ settings.meta.name }} - {{ settings.meta.description }}" width="auto" height="28">
               </a>
           </div>
         {% else %}
           <div class="navbar-item text-logo" alt="{{ settings.meta.name }}" title="{{ settings.meta.name }} - {{ settings.meta.description }}">
-              <a class="align-vcentered" href="/">
+              <a class="align-vcentered" href="{{ base_url_in_default }}/">
                 {% if settings.meta.icon %}
                   <img src="{{ base_url_in_default + settings.meta.icon }}" class="icon">
                 {% endif %}
