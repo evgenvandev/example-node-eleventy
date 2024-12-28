@@ -6,6 +6,7 @@
 }
 ---
 <!DOCTYPE html>
+{% set base_url_in_default = "/" + settings.meta.url %}
 {% if header != false %}
 <html lang="en" class="has-spaced-navbar-fixed-top">
 {% else %}
@@ -38,20 +39,20 @@
     {% block head %}{% endblock %}
 
     {# icon #}
-    {% if settings.meta.icon %}<link rel="icon" href="{{ settings.meta.icon }}" />{% elif title %}<link rel="icon" href="/favicon.ico" />{% endif %}
+    {% if settings.meta.icon %}<link rel="icon" href="{{ base_url_in_default + settings.meta.icon }}" />{% elif title %}<link rel="icon" href="{{ base_url_in_default }}/favicon.ico" />{% endif %}
 
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ base_url_in_default }}/static/css/styles.css"/>
 
     {% if prism == true %}
-      {# <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css"> #}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-line-numbers.css">
-      <link rel="stylesheet" type="text/css" href="/static/css/prism.css">
+      {# <link rel="stylesheet" type="text/css" href="{{ base_url_in_default }}/static/css/prism-tomorrow.css"> #}
+      <link rel="stylesheet" type="text/css" href="{{ base_url_in_default }}/static/css/prism-line-numbers.css">
+      <link rel="stylesheet" type="text/css" href="{{ base_url_in_default }}/static/css/prism.css">
     {% endif %}
 
     {% if katex == true %}
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
-      <script defer src="/static/js/katex.min.js"></script>
-      <script defer src="/static/js/auto-render.min.js" crossorigin="anonymous"></script>
+      <script defer src="{{ base_url_in_default }}/static/js/katex.min.js"></script>
+      <script defer src="{{ base_url_in_default }}/static/js/auto-render.min.js" crossorigin="anonymous"></script>
     {% endif %}
 
   </head>
@@ -67,13 +68,13 @@
       {% include "../partials/footer.njk" %}
     {% endif %}
 
-    <script src="/static/js/footer.js"></script>
-    {# <script src="/static/js/alpine.js"></script> #}
+    <script src="{{ base_url_in_default }}/static/js/footer.js"></script>
+    {# <script src="{{ base_url_in_default }}/static/js/alpine.js"></script> #}
 
     {# search #}
 
     {% if toc == true %}
-      <script src="/static/js/toc.js"></script>
+      <script src="{{ base_url_in_default }}/static/js/toc.js"></script>
       <script>
         const toc = new fizzyToc({
           contentEl: 'content',
@@ -91,8 +92,8 @@
     {% endif %}
     
     {% if prism == true %}
-      <script src="/static/js/prism-line-numbers.min.js"></script>
-      <script defer src="/static/js/prism.js"></script>
+      <script src="{{ base_url_in_default }}/static/js/prism-line-numbers.min.js"></script>
+      <script defer src="{{ base_url_in_default }}/static/js/prism.js"></script>
     {% endif %}
 
     {% if katex == true %}

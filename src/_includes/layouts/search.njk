@@ -3,6 +3,7 @@ layout: default
 toc: false
 comments: false
 ---
+{% set base_url_in_default = "/" + settings.meta.url %}
 <section class="section is-paddingless-bottom">
   <div class="container">
       <h1 class="title has-text-centered"><i class="iconfont icon-search"></i> <span id="search-title">{{ title }}</span><span id="searchWord"></span> </h1>
@@ -43,7 +44,7 @@ comments: false
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-<script type="text/javascript" src="/static/js/search.js"></script>
+<script type="text/javascript" src="{{ base_url_in_default }}/static/js/search.js"></script>
 <script type="text/javascript" src="/static/js/lunr.stemmer.support.js"></script>
 <script type="text/javascript" src="/static/js/lunr.multi.js"></script>
 <script type="text/javascript" src="/static/js/lunr.ru.js"></script>
