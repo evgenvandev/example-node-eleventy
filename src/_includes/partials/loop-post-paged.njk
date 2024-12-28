@@ -23,8 +23,8 @@
 
         {# featured image #}
         {% if settings.post.showFeatureImage and post.data.image %}
-          <a class="column is-hidden-mobile is-paddingless" href="{{ post.url | url | replace("/" + settings.meta.url, "") }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
-            <div class="featured-image" style="background-image: url('{{ "/" + settings.meta.url + post.data.image }}')"></div>
+          <a class="column is-hidden-mobile is-paddingless" href="{{ post.url | url }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
+            <div class="featured-image" style="background-image: url(' post.data.image }}')"></div>
           </a>
           <a class="column is-hidden-tablet" href="{{ post.url | url }}" alt="{{ post.data.title }}" title="{{ post.data.title }}">
             <div class="featured-image" style="background-image: url('{{ post.data.image }}')"></div>
