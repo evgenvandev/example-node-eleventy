@@ -32,7 +32,7 @@ comments: true
   {% if settings.post.showFeatureImage and image %}
     <div class="box is-paddingless is-shadowless is-full-mobile is-centered">
       <section class="featured-image">
-        <div class="featured-image" style="background-image:url({{ "/" + settings.meta.url + image }});">
+        <div class="featured-image" style="background-image:url({{ image }});">
           {# featured post label #}
           {% if isFeatured %}
             <span style="background-color:{{settings.appearance.mainColor}};" class="featured-label primary large is-montserrat" title="Featured Post">
