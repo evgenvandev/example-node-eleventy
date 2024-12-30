@@ -23,11 +23,11 @@
 
         {# featured image #}
         {% if settings.post.showFeatureImage and post.data.image %}
-          <a class="column is-hidden-mobile is-paddingless" href="{{ post.url | url }}" target="_blank" alt="{{ post.data.title }}" title="{{ post.data.title }}">
-            <div class="featured-image" style="background-image: url('{{ post.data.image }}')"></div>
+          <a class="column is-hidden-mobile is-paddingless" href="{{ settings.meta.url + post.url | url }}" target="_blank" alt="{{ post.data.title }}" title="{{ post.data.title }}">
+            <div class="featured-image" style="background-image: url('{{ settings.meta.url + post.data.image }}')"></div>
           </a>
-          <a class="column is-hidden-tablet" href="{{ post.url | url }}" target="_blank" alt="{{ post.data.title }}" title="{{ post.data.title }}">
-            <div class="featured-image" style="background-image: url('{{ post.data.image }}')"></div>
+          <a class="column is-hidden-tablet" href="{{ settings.meta.url + post.url | url }}" target="_blank" alt="{{ post.data.title }}" title="{{ post.data.title }}">
+            <div class="featured-image" style="background-image: url('{{ settings.meta.url + post.data.image }}')"></div>
           </a>
 
           {# post info #}
@@ -87,7 +87,7 @@
                   <div class="level-item">
                     {% for name, slug in tagList %}
                       <div class="buttons are-small">
-                        <a href="/tag/{{ slug }}/" target="_blank" class="button is-light has-text-weight-semibold">{{ name }}</a>
+                        <a href="{{ settings.meta.url }}/tag/{{ slug }}/" target="_blank" class="button is-light has-text-weight-semibold">{{ name }}</a>
                       </div>
                     {% endfor %}
                   </div>
@@ -104,7 +104,7 @@
               </div>
 
               {# heading & summary #}
-              <a href="{{ post.url | url }}" target="_blank" class="has-text-black">
+              <a href="{{ settings.meta.url + post.url | url }}" target="_blank" class="has-text-black">
                 <h1 class="title is-3 is-size-5-mobile is-margin-bottom-1">{{ post.data.title }}</h1>
               </a>
               {% if settings.post.showFeatureImage and post.data.image %}
@@ -141,8 +141,8 @@
                         {% if primary_author_avatar %}
                           <div class="column is-narrow is-rpaddingless">
                             <figure class="image is-32x32">
-                              <a href="/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
-                                <img class="image-squared round-border-6" src="{{ primary_author_avatar }}" alt="{{ primary_author_name }}" title="{{ primary_author_name }}">
+                              <a href="{{ settings.meta.url }}/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
+                                <img class="image-squared round-border-6" src="{{ settings.meta.url + primary_author_avatar }}" alt="{{ primary_author_name }}" title="{{ primary_author_name }}">
                               </a>
                             </figure>
                           </div>
@@ -150,7 +150,7 @@
 
                         {# author name #}
                         <div class="column is-narrow has-text-weight-bold">
-                          <a href="/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
+                          <a href="{{ settings.meta.url }}/author/{{primary_author_slug}}/" class="has-text-grey-dark is-font-weight-600">
                             {{ primary_author_name }}
                           </a>
                         </div>
