@@ -60,12 +60,14 @@
               {% set primary_tag_name = "" %}
               {% set primary_tag_slug = "" %}
 
+              {% set tagList = [] %}
               {% for name, slug in site_tags %}
                 {% for pTag in post.data.tags %}
                   {% if slug == pTag %}
                     {# the first(i.e. [0]) tag is "post", set in `src/collections/post/post.json` #}
-                    {% set primary_tag_name = name %}
-                    {% set primary_tag_slug = slug %}
+                    {# {% set primary_tag_name = name %} #}
+                    {# {% set primary_tag_slug = slug %} #}
+                    {% set tagList = (tagList.push([name, slug]), tagList) %}
                   {% endif %}
                 {% endfor %}
               {% endfor %}
@@ -73,13 +75,22 @@
               <div class="level is-mobile is-uppercase is-margin-bottom-1">
                 <div class="level-left">
                   {# primary tag #}
-                  {% if primary_tag_slug | length > 0 %}
+                  {# {% if primary_tag_slug | length > 0 %}
                     <div class="level-item">
                       <div class="buttons are-small">
                         <a href="/tag/{{primary_tag_slug}}/" class="button is-light has-text-weight-semibold">{{ primary_tag_name }}</a>
                       </div>
                     </div>
-                  {% endif %}
+                  {% endif %} #}
+
+                  {# list tags #}
+                  <div class="level-item">
+                    {% for name, slug in tagList %}
+                      <div class="buttons are-small">
+                        <a href="/tag/{{ slug }}/" class="button is-light has-text-weight-semibold">{{ name }}</a>
+                      </div>
+                    {% endfor %}
+                  </div>
 
                   {# date #}
                   <div class="level-item is-size-7 meta-text date">
