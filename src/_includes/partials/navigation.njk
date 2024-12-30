@@ -1,7 +1,7 @@
 {# navigation #}
 {% if navigation.navItems %}
   {% for items in navigation.navItems %}
-    <a class="navbar-item {{ 'nav-current' if (path | replace("/", "")) == (items.url | replace("/", "")) }}" href="{{ items.url }}">
+    <a class="navbar-item {{ 'nav-current' if (path | replace("/", "")) == (items.url | replace("/", "")) }}" href="{{ settings.meta.url + items.url }}">
       {{ items.text }}
     </a>
   {% endfor %}
