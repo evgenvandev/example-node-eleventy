@@ -70,6 +70,7 @@
           // panel-block
           const el = document.createElement("a");
           el.setAttribute("href", id);
+          el.setAttribute("target", "_blank");
           el.classList.add("panel-block");
           resEl.appendChild(el);
           
