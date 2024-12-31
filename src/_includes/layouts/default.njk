@@ -38,7 +38,7 @@
     {% block head %}{% endblock %}
 
     {# icon #}
-    {% if settings.meta.icon %}<link rel="icon" href="{{ settings.meta.icon }}" />{% elif title %}<link rel="icon" href="{{ settings.meta.url }}/favicon.ico" />{% endif %}
+    {% if settings.meta.icon %}<link rel="icon" href="{{ settings.meta.url + settings.meta.icon }}" />{% elif title %}<link rel="icon" href="{{ settings.meta.url }}/favicon.ico" />{% endif %}
 
     <link rel="stylesheet" type="text/css" href="{{ settings.meta.url }}/static/css/styles.css"/>
 
