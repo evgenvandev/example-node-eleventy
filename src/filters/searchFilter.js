@@ -19,7 +19,7 @@ module.exports = function(collection) {
 
   collection.forEach(post => {
     index.addDoc({
-      id: /example-node-eleventy + post.url,
+      id: "/example-node-eleventy" + post.url,
       title: post.template.frontMatter.data.title,
       url: post.template.frontMatter.data.url,
       tags: post.template.frontMatter.data.tags,
