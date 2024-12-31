@@ -91,6 +91,7 @@
               const a = document.createElement("a");
               a.classList.add("limit-text-wide","is-padding-right-05");
               a.setAttribute("href", id);
+              a.setAttribute("target", "_blank");
               a.textContent = `${title}`;
               h3.appendChild(a);
 
