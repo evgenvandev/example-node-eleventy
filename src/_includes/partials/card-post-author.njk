@@ -5,12 +5,12 @@
       <div class="column">
           <div class="card" style="border-radius:6px;overflow:hidden;">
             <div class="card-content about-author has-text-centered">
-              <a href="/author/{{ slug }}/" class="has-text-grey-darker">
+              <a href="{{ settings.meta.url }}/author/{{ slug }}/" class="has-text-grey-darker">
                   <figure class="image is-96x96 is-margin-auto">
                     {% if avatar %}
-                      <img class="image-squared box author-avatar" src="{{ avatar }}" alt="{{ name }}" title="{{ name }}">
+                      <img class="image-squared box author-avatar" src="{{ settings.meta.url + avatar }}" alt="{{ name }}" title="{{ name }}">
                     {% else %}
-                      <img class="image-squared box author-avatar" src="/static/img/user.svg" alt="{{ name }}" title="{{ name }}">
+                      <img class="image-squared box author-avatar" src="{{ settings.meta.url }}/static/img/user.svg" alt="{{ name }}" title="{{ name }}">
                     {% endif %}
                   </figure>
                   <div class="name is-main-font">{{ name }}</div>
