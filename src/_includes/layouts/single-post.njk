@@ -86,7 +86,7 @@ comments: true
               {% endif %}
             </button>
             {% for name, slug in tagList %}
-              <a href="/tag/{{slug}}/" class="button is-size-7-mobile has-text-weight-semibold">{{ name }}</a>
+              <a href="{{ settings.meta.url }}/tag/{{slug}}/" class="button is-size-7-mobile has-text-weight-semibold">{{ name }}</a>
             {% endfor %}
           </div>
         {% endif %}
